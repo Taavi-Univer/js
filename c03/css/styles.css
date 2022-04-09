@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hotelAvailability {
+  max-width: 49vw;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: rgb(170, 156, 156);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.top-content h1,
+.hotels {
+  font-size: 1.9rem;
+  font-weight: 400;
+  padding: 0.3em 0;
+  border-bottom: 2px solid rgb(112, 89, 74);
+}
+
+.seaHotel {
+  border-bottom: 2px solid rgb(112, 89, 74);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+#sgym,
+#spool,
+#wgym,
+#wpool {
+  font-size: 1.3rem;
+}

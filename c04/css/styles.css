@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 26vw;
+  background-color: rgb(180, 180, 27);
+  color: black;
+  text-align: center;
+  padding: 1em;
+  margin: 1em auto;
+}
