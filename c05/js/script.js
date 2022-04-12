@@ -65,11 +65,18 @@
 
 // containerEl.removeChild(removeEl);
 
-const element = document.getElementById("liWithText3");
-if (element.hasAttribute("class")) {
-  let attr = element.getAttribute("class");
-  console.log(attr);
+// const element = document.getElementById("liWithText3");
+// if (element.hasAttribute("class")) {
+//   let attr = element.getAttribute("class");
+//   console.log(attr);
 
-  let el = document.getElementById("attributeName");
-  el.innerHTML = "<p>The 3 li item has a class name: " + attr + "</p>";
-}
+//   let el = document.getElementById("attributeName");
+//   el.innerHTML = "<p>The 3 li item has a class name: " + attr + "</p>";
+// }
+
+const elements = document.getElementById("elements");
+// console.log(elements);
+let firstItem = document.createElement("li");
+const firstItemText = document.createTextNode("with insertBefore method");
+firstItem.appendChild(firstItemText);
+elements.insertBefore(firstItem, elements.firstChild);
