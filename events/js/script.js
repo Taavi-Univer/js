@@ -34,7 +34,7 @@ const username = document.getElementById("username");
 
 function checkUsername(minLength) {
   if (username.value.length < minLength) {
-    elMsg.textContent = "Username must be 6 charecters or more";
+    elMsg.textContent = "Username must be " + minLength + " charecters or more";
   } else {
     elMsg.textContent = "";
   }
