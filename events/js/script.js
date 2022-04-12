@@ -29,17 +29,40 @@
 
 // ----------------
 
-let elMsg = document.getElementById("feedback");
-const username = document.getElementById("username");
+// let elMsg = document.getElementById("feedback");
+// const username = document.getElementById("username");
 
-function checkUsername(minLength) {
-  if (username.value.length < minLength) {
-    elMsg.textContent = "Username must be " + minLength + " charecters or more";
-  } else {
-    elMsg.textContent = "";
-  }
+// function checkUsername(minLength) {
+//   if (username.value.length < minLength) {
+//     elMsg.textContent = "Username must be " + minLength + " charecters or more";
+//   } else {
+//     elMsg.textContent = "";
+//   }
+// }
+
+// username.addEventListener("blur", function () {
+//   checkUsername(6);
+// });
+
+// ---------------
+
+function removeItem(e) {
+  let target, elParent, elGrandparent;
+
+  target = e.target;
+  console.log(target);
+
+  elParent = target.parentNode;
+  console.log(elParent);
+
+  elGrandparent = target.parentNode.parentNode;
+  console.log(elGrandparent);
+
+  elGrandparent.removeChild(elParent);
 }
 
-username.addEventListener("blur", function () {
-  checkUsername(6);
+const shoppingList = document.getElementById("shoppingList");
+console.log(shoppingList);
+shoppingList.addEventListener("click", function (e) {
+  removeItem(e);
 });

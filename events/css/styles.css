@@ -6,8 +6,23 @@
 
 .container {
   width: 36vw;
+  background-color: rgb(228, 183, 183);
   color: black;
   text-align: center;
   padding: 1em;
   margin: 1em auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 1em 0;
+}
+
+a {
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
