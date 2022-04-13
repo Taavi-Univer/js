@@ -46,23 +46,47 @@
 
 // ---------------
 
-function removeItem(e) {
-  let target, elParent, elGrandparent;
+// function removeItem(e) {
+//   let target, elParent, elGrandparent;
 
-  target = e.target;
-  console.log(target);
+//   target = e.target;
+//   console.log(target);
 
-  elParent = target.parentNode;
-  console.log(elParent);
+//   elParent = target.parentNode;
+//   console.log(elParent);
 
-  elGrandparent = target.parentNode.parentNode;
-  console.log(elGrandparent);
+//   elGrandparent = target.parentNode.parentNode;
+//   console.log(elGrandparent);
 
-  elGrandparent.removeChild(elParent);
+//   elGrandparent.removeChild(elParent);
+// }
+
+// const shoppingList = document.getElementById("shoppingList");
+// console.log(shoppingList);
+// shoppingList.addEventListener("click", function (e) {
+//   removeItem(e);
+// });
+
+// -----------------
+
+function checkUsername() {
+  const username = el.value;
+  if (username.length < 6) {
+    msg.className = "warning";
+    msg.textContent = "Username must be at lest 6 charecters";
+  } else {
+    msg.textContent = "";
+  }
 }
 
-const shoppingList = document.getElementById("shoppingList");
-console.log(shoppingList);
-shoppingList.addEventListener("click", function (e) {
-  removeItem(e);
-});
+function tipUser() {
+  msg.className = "tip";
+  msg.innerHTML = "Username must be at leat 6 charecters";
+}
+
+const el = document.getElementById("username");
+// console.log(el);
+const msg = document.getElementById("feedback");
+
+el.addEventListener("focus", tipUser);
+el.addEventListener("blur", checkUsername);

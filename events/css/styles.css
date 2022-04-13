@@ -13,16 +13,16 @@
   margin: 1em auto;
 }
 
-ul {
-  list-style-type: none;
+input {
+  display: block;
+  margin: 0.3em auto;
+  padding: 0.3em;
 }
 
-li {
-  margin: 1em 0;
+.tip {
+  color: rgb(156, 77, 77);
 }
 
-a {
-  color: black;
-  font-size: 1.2rem;
-  text-decoration: none;
+.warning {
+  color: blueviolet;
 }
