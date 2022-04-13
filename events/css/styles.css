@@ -4,25 +4,35 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 36vw;
-  background-color: rgb(228, 183, 183);
-  color: black;
-  text-align: center;
-  padding: 1em;
+#note {
+  max-width: 76vw;
+  height: 36vh;
+  background-color: black;
   margin: 1em auto;
 }
 
-input {
+.header {
+  /* display: flex; */
+}
+
+a {
   display: block;
-  margin: 0.3em auto;
+  color: white;
+  text-decoration: none;
+  text-align: right;
   padding: 0.3em;
 }
 
-.tip {
-  color: rgb(156, 77, 77);
+.container {
+  max-width: 60%;
+  background-color: rgb(241, 209, 216);
+  color: brown;
+  margin: 1em auto;
+  padding: 1em;
+  border: 1px solid rgb(175, 103, 103);
 }
 
-.warning {
-  color: blueviolet;
+h2 {
+  text-align: center;
+  margin-bottom: 0.3em;
 }

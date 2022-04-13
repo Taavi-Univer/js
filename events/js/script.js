@@ -69,24 +69,42 @@
 
 // -----------------
 
-function checkUsername() {
-  const username = el.value;
-  if (username.length < 6) {
-    msg.className = "warning";
-    msg.textContent = "Username must be at lest 6 charecters";
-  } else {
-    msg.textContent = "";
-  }
+// function checkUsername() {
+//   const username = el.value;
+//   if (username.length < 6) {
+//     msg.className = "warning";
+//     msg.textContent = "Username must be at lest 6 charecters";
+//   } else {
+//     msg.textContent = "";
+//   }
+// }
+
+// function tipUser() {
+//   msg.className = "tip";
+//   msg.innerHTML = "Username must be at leat 6 charecters";
+// }
+
+// const el = document.getElementById("username");
+// // console.log(el);
+// const msg = document.getElementById("feedback");
+
+// el.addEventListener("focus", tipUser);
+// el.addEventListener("blur", checkUsername);
+
+// --------------------------------------
+
+let msg = '<div class"header"><a id="close" href="#">close X</a></div>';
+msg += '<div class="container"><h2>System Maintenance</h2>';
+msg += "Our servers are being updated between 6 and 9 a.m.</div>";
+
+const el = document.createElement("div");
+el.setAttribute("id", "note");
+el.innerHTML = msg;
+document.body.appendChild(el);
+
+function dismissNote() {
+  document.body.removeChild(el);
 }
 
-function tipUser() {
-  msg.className = "tip";
-  msg.innerHTML = "Username must be at leat 6 charecters";
-}
-
-const el = document.getElementById("username");
-// console.log(el);
-const msg = document.getElementById("feedback");
-
-el.addEventListener("focus", tipUser);
-el.addEventListener("blur", checkUsername);
+const elClose = document.getElementById("close");
+elClose.addEventListener("click", dismissNote);
